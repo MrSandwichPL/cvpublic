@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/cvpublic/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MrSandwich</title>
+    <script>
+      (function() {
+        // Sprawdzamy localStorage lub ustawienia systemowe
+        const savedTheme = localStorage.getItem("theme");
+        const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (savedTheme === "dark" || (!savedTheme && systemDark)) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+    <style>
+      html {
+        background-color: #ffffff;
+      }
+      html.dark {
+        background-color: #18181b;
+    }
+    </style>
+    <script type="module" crossorigin src="/cvpublic/assets/index-CdPnopI9.js"></script>
+    <link rel="stylesheet" crossorigin href="/cvpublic/assets/index-CP-pk5Us.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
